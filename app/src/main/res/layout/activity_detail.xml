@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="detailActivityObject" type="com.muzafferatmaca.omdbapimovie.activities.DetailActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        tools:context=".activities.DetailActivity">
+
+        <ImageButton
+            android:id="@+id/backImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="@{() -> detailActivityObject.setImageButton()}"
+            android:background="@drawable/ic_back"
+            android:elevation="5dp"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/posterDetailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:transitionName="sharedName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bgGradient"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/detail_gradient_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/detailTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-30dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="rerererere"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posterDetailImageView" />
+
+        <TextView
+            android:id="@+id/detailReleasedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="16 Dec 2021"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailTitleTextView" />
+
+        <TextView
+            android:id="@+id/detailGenreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Action, Adventure, Mystery"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailReleasedTextView" />
+
+        <TextView
+            android:id="@+id/detailRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="IMDB : 7.4"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/detailRunTimeTextView"
+            app:layout_constraintTop_toBottomOf="@id/detailTitleTextView" />
+
+        <TextView
+            android:id="@+id/detailActorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Robert Downey Jr., Jude Law, Jared Harris"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailGenreTextView" />
+
+        <TextView
+            android:id="@+id/detailCountryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="United States, United Kingdom"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailActorTextView" />
+
+        <TextView
+            android:id="@+id/detailRunTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="129 min"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/detailReleasedTextView"
+            app:layout_constraintTop_toBottomOf="@id/detailTitleTextView" />
+
+        <TextView
+            android:id="@+id/plot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Plot"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryTextView" />
+
+        <TextView
+            android:id="@+id/detailPlotTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

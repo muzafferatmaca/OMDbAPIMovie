@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OMDbAPIMovie</string>
+    <string name="mainText">Movie Preview Info</string>
+    <string name="searchHintText">Search for Movie</string>
+    <string name="movieAppInfo">You can search to have information about the movie you want to watch.</string>
+    <string name="errorMessage">Please enter a more descriptive movie name</string>
+    <string name="detailButtonText">Detail</string>
+    <string name="imdb">IMDB :</string>
+</resources>
