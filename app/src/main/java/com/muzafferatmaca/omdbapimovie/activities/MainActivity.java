@@ -40,20 +40,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(R.string.mainText);
         define();
-
         searchList = new ArrayList<>();
         RecyclerView.LayoutManager manager = new GridLayoutManager(MainActivity.this, 3);
         recyclerView.setLayoutManager(manager);
         searchAdapter = new SearchAdapter(searchList, this, this);
         movieDao = ApiUtils.movieDao();
         setSearchView();
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
         searchView.clearFocus();
     }
 
